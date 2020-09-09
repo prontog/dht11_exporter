@@ -36,5 +36,5 @@ Make sure your node exporter uses `textfile` in `--collectors.enabled` and add t
 ## Example queries
 
 ```
-dht11_temperature{job="node", device="DHT11"}
+dht_temperature{job="node", device="DHT11"}
 ```

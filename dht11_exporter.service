@@ -3,8 +3,8 @@ Description=Collect Raspberry Pi metrics for Prometheus
 After=network-online.target
 
 [Service]
-Environment=PROM_FILE_PATH=/var/lib/node_exporter/raspberry_exporter.prom SLEEP_DURATION=15
-ExecStart=/usr/local/bin/raspberry_exporter
+Environment=PROM_FILE_PATH=/var/lib/node_exporter/dht11_exporter.prom SLEEP_DURATION=15
+ExecStart=/usr/local/bin/dht11_exporter
 
 [Install]
 WantedBy=multi-user.target
