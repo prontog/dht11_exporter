@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+set -eu
+
+TEXTFILE=${PROM_FILE_PATH:-/var/lib/node_exporter/textfile_collector/dht11-metrics.prom}
+TEMPFILE=$TEXTFILE.$$
+SLEEP_DURATION=${SLEEP_DURATION:-15}
+
+trap "rm $TEXTFILE" EXIT KILL TERM STOP
+
+while true; do
+	mkdir -p $(dirname $TEXTFILE)
+
+	cat /dev/null > $TEMPFILE
+
+	dht11.py >> $TEMPFILE
+
+	mv $TEMPFILE $TEXTFILE
+	sleep $SLEEP_DURATION
+done
