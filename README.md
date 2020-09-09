@@ -18,6 +18,7 @@ Export DHT11 sensor metrics in *Prometheus* *node_exporter*'s **textfile** forma
 For example you can deploy using git:
 
 ``` bash
+sudo pip3 install Adafruit_DHT
 cd /opt
 sudo git clone https://github.com/prontog/dht11_exporter
 cd dht11-exporter
