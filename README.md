@@ -12,8 +12,8 @@ Export DHT11 sensor metrics in *Prometheus* *node_exporter*'s **textfile** forma
 ## Install
 
 - copy `dht11_exporter` to `/usr/local/bin`.
-- copy `dht11-exporter.service` to `/etc/systemd/system`
-- enable and start `dht11-exporter`
+- copy `dht11_exporter.service` to `/etc/systemd/system`
+- enable and start `dht11_exporter`
 
 For example you can deploy using git:
 
@@ -21,12 +21,12 @@ For example you can deploy using git:
 sudo pip3 install Adafruit_DHT
 cd /opt
 sudo git clone https://github.com/prontog/dht11_exporter
-cd dht11-exporter
-sudo ln -s /opt/dht11-exporter/dht11-exporter.service /etc/systemd/system
-sudo ln -s /opt/dht11-exporter/dht11_exporter /usr/local/bin
-sudo ln -s /opt/dht11-exporter/dht11.py /usr/local/bin
-sudo systemctl enable dht11-exporter
-sudo systemctl start dht11-exporter
+cd dht11_exporter
+sudo ln -s /opt/dht11_exporter/dht11_exporter.service /etc/systemd/system
+sudo ln -s /opt/dht11_exporter/dht11_exporter /usr/local/bin
+sudo ln -s /opt/dht11_exporter/dht11.py /usr/local/bin
+sudo systemctl enable dht11_exporter
+sudo systemctl start dht11_exporter
 ```
 
 ## Configure your node exporter
