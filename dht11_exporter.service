@@ -1,5 +1,5 @@
 [Unit]
-Description=Collect Raspberry Pi metrics for Prometheus
+Description=Collect DHT11 metrics for Prometheus
 After=network-online.target
 
 [Service]

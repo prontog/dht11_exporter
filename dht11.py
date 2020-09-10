@@ -10,6 +10,7 @@ pin = 4
 humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
 
 if humidity is not None and temperature is not None:
-    print('dht_temperature={{ device="DHT11" }} {0:0.1f} dht_humidity{{ device="DHT11" }} {1:0.1f}'.format(temperature, humidity))
+    print('dht_temperature{{ device="DHT11" }} {:0.1f}'.format(temperature))
+    print('dht_humidity{{ device="DHT11" }} {:0.1f}'.format(humidity))
 else:
     print('')
